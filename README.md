@@ -3,6 +3,7 @@
 ## Introdução
 Essa é a segunda atividade individual da disciplina de programação para web 2 (IFPB, campus Cajazeiras).
 
+Veja o projeto funcionando através do seguinte link -> https://lista-de-tecnologias.vercel.app/
 ## Objetivo
 O objetivo desta atividade é recriar o protótipo de tela disponibilizado pelo professor da disciplina, utilizando os conceitos estudados durante as aulas.
 
