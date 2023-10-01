@@ -23,7 +23,7 @@ export const TechnologyContainer = styled.div`
 
 export const SelectDisabled = styled.div`
     cursor: pointer;
-    border: 2px solid ${props => props.theme.blue};
+    border: 3px solid ${props => props.theme.blue};
     width: 1.8rem;
     height: 1.8rem;
     background-color: ${props => props.theme["gray-500"]};

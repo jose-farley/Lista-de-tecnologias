@@ -1,5 +1,5 @@
 import {PlusCircle, Trash} from '@phosphor-icons/react'
-import { ContainerInput, ContainerTechInfo, Created, Done, ListContainer } from './style'
+import { ContainerInput, ContainerTechInfo, ContainerWithoutTechnologies, Created, Done, ListContainer } from './style'
 import { useState } from 'react'
 import nextId from "react-id-generator";
 import { Technology } from '../Technology';
@@ -49,6 +49,27 @@ export function List(){
         })
         setTechnologiesStudied(onlyTechnologiesStudied);
     }
+    let TechnologyList;
+    if(technologiesToStudy.length==0){
+        TechnologyList = 
+        <ContainerWithoutTechnologies>
+            <strong>Você ainda não tem tecnologias cadastradas</strong>
+            <span>Crie tecnologia e organize seus itens a fazer</span>
+        </ContainerWithoutTechnologies>
+    }else{
+        TechnologyList = technologiesToStudy.map(tech => {
+            return (
+               <Technology 
+                content={tech.content}
+                id={tech.id}
+                status={tech.status}
+                key={tech.id}
+                switchStatus={switchStatus}
+                removeTech={hadnleRemoveTechnology}
+                />
+            )
+        })
+    }
     //Body----------------------------------------------------------------------
     return (
         <ListContainer>
@@ -62,20 +83,7 @@ export function List(){
                 <Done>Concluidas <span>{technolgiesStudied.length}</span></Done>
             </ContainerTechInfo>
             
-            {
-                technologiesToStudy.map(tech => {
-                    return (
-                       <Technology 
-                        content={tech.content}
-                        id={tech.id}
-                        status={tech.status}
-                        key={tech.id}
-                        switchStatus={switchStatus}
-                        removeTech={hadnleRemoveTechnology}
-                        />
-                    )
-                })
-            }
+            {TechnologyList}
         </ListContainer>
     )
 }

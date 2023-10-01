@@ -44,7 +44,6 @@ export const ContainerInput = styled.div`
         }
     }
     button:disabled {
-        opacity: 0.8;
         background-color: #2b5269; 
         cursor: not-allowed;
         
@@ -78,3 +77,20 @@ export const Done = styled.strong`
     status:boolean
 
  }
+
+ export const ContainerWithoutTechnologies = styled.div`
+    width: 46rem;
+    height: 10.75rem;
+    border-top: 1px solid ${props => props.theme["gray-400"]};
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    
+    strong{
+        color:${props => props.theme["gray-300"]};
+    }
+    span{
+        color:${props => props.theme["gray-300"]};
+    }
+ `
