@@ -72,11 +72,6 @@ export const Created = styled.strong`
 export const Done = styled.strong`
    color: ${props => props.theme.purple};
 `
- interface TechProps {
-    id:string
-    status:boolean
-
- }
 
  export const ContainerWithoutTechnologies = styled.div`
     width: 46rem;

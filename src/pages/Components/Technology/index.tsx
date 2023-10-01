@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { SelectActived, SelectDisabled, TechnologyContainer } from "./style"
 import {Check, Trash} from "@phosphor-icons/react"
 interface props {

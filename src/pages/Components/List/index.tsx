@@ -1,4 +1,4 @@
-import {PlusCircle, Trash} from '@phosphor-icons/react'
+import {PlusCircle} from '@phosphor-icons/react'
 import { ContainerInput, ContainerTechInfo, ContainerWithoutTechnologies, Created, Done, ListContainer } from './style'
 import { useState } from 'react'
 import nextId from "react-id-generator";
@@ -21,7 +21,7 @@ export function List(){
         (event.target.value)?setButtonIsDisabled(false):setButtonIsDisabled(true)
         setTypedTechnology(event.target.value)
     }
-    function handleInsertTechnology(event: React.MouseEvent<HTMLButtonElement>){
+    function handleInsertTechnology(){
             countTechnologiesStudied([...technologiesToStudy, {id: nextId(), content: typedTechnology, status:false}])
             setTechnologiesToStudy([...technologiesToStudy, {id: nextId(), content: typedTechnology, status:false}])
 
