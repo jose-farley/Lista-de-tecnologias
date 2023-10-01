@@ -10,7 +10,7 @@ O objetivo desta atividade é recriar o protótipo de tela disponibilizado pelo 
 
 Clone o repositório com o seguinte comando:
 ```
-git clone https://github.com/jose-farley/Widget-React.git
+git clone https://github.com/jose-farley/Lista-de-tecnologias.git
 ```
 Entre na pasta do projeto que você acabou de clonar e use os seguintes comandos:
 ```
